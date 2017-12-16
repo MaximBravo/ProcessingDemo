@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int height = displayMetrics.heightPixels;
         int width = displayMetrics.widthPixels;
-        Sketch.screenWidth = width;
-        Sketch.screenHeight = height;
+        PhoneData.screenWidth = width;
+        PhoneData.screenHeight = height;
         Log.i("MainActivity", "width: " + width + " , " + height);
-        sketch = new Sketch();
+        sketch = new Sketch2();
         PFragment fragment = new PFragment(sketch);
         fragment.setView(frame, this);
     }
