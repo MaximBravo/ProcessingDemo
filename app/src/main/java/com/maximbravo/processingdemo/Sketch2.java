@@ -39,7 +39,8 @@ public class Sketch2 extends PApplet {
     public void draw() {
         background(0);
         text("X: " + (int)ax + "\nY: " + (int)ay + "\nZ: " + (int)az, 0, 0, width, height);
-        ball.move(ay, ax);
+        float speed = ball.getWidth()/4;
+        ball.move(ay*ball.getWidth()/speed, ax*ball.getHeight()/speed);
         ball.draw(this);
     }
 
