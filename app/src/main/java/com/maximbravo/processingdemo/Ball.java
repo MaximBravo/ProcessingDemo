@@ -24,17 +24,18 @@ class Ball {
     }
 
     public void move(float moveX, float moveY) {
-        if(x + moveX > 0 + width/2 &&
-                x + moveX + width/2 < screenWidth) {
-            x += moveX;
+        if(Math.abs(moveX) > 0.1 && Math.abs(moveY) > 0.1) {
+            if (x + moveX > 0 + width / 2 &&
+                    x + moveX + width / 2 < screenWidth) {
+                x += moveX;
+            }
+
+            if (y + moveY > 0 + height / 2 &&
+                    y + moveY + height / 2 < screenHeight) {
+                y += moveY;
+            }
+
         }
-
-        if(y + moveY > 0 + height/2 &&
-                y + moveY + height/2 < screenHeight) {
-            y += moveY;
-        }
-
-
     }
 
     public float getWidth() {
